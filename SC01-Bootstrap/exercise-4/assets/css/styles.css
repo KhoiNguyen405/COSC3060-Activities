@@ -1,1 +1,15 @@
 /* You can add your own css styles here! */
+:root {
+    --primary-color: #E81E2C;
+    --primary-hover-color: #c91b27;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover-color);
+    border-color: var(--primary-hover-color);
+}
