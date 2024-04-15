@@ -1,0 +1,12 @@
+{
+  "name": "activity-4",
+  "version": "1.0.0",
+  "description": "Studio Class 03 - NodeJS Introduction Activity 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
