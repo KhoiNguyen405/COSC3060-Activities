@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "figlet": "^1.7.0"
+  },
+  "name": "activity-3",
+  "version": "1.0.0",
+  "description": "Studio Class 03 - NodeJS Introduction Activity 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

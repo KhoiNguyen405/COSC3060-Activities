@@ -9,3 +9,5 @@ let userage = await rl.question("What is your age? ");
 
 console.log(`Name: ${chalk.blue(username)} 
 Age: ${chalk.green(userage)}`);
+
+rl.close();
