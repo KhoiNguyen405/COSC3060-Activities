@@ -8,12 +8,13 @@ function myValidate(event) {
     var errorMessageDiv = document.querySelector('#errorMessage'); // Get the error message div
 
     if (nameInput === '') {
-        errorMessageDiv.textContent = 'Please enter your name.'; // Set the text of the error message
+        errorMessageDiv.textContent = 'Name field is empty. Please enter your name.'; // Set the text of the error message
         errorMessageDiv.style.display = 'block'; // Show the error message div
-        setTimeout(function() {
-            errorMessageDiv.style.display = 'none'; // Hide the error message div after 2 seconds
-            errorMessageDiv.textContent = ''; // Clear the error message
-        }, 2000);
+        errorMessageDiv.focus();
+        // setTimeout(function() {
+        //     errorMessageDiv.style.display = 'none'; // Hide the error message div after 2 seconds
+        //     errorMessageDiv.textContent = ''; // Clear the error message
+        // }, 2000);
     } else {
         errorMessageDiv.style.display = 'none';
         alert('Submitted name: '+ nameInput); // Log the submitted name if the input is not empty
