@@ -57,6 +57,17 @@ app.post('/submit', (req, res) => {
     res.render('success', { user: userData });
 })
 
+// Handle dynamic routes
+app.get('/user/:username', (req, res) => {
+    const username = req.params.username;
+
+    // Handle query parameters
+    const isAdmin = req.query.isAdmin || 'false'; // Default to 'false' if not provided
+
+    // Render an EJS template and pass the username
+    res.render('userProfile', { username, isAdmin });
+});
+
 // Start the server and listen on port 3000
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
