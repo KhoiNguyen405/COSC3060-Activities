@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Express App</title>
-</head>
-<body>
-    <header>
-        <h1>Welcome to My Express App</h1>
-    </header>
-    <main>
-        <%- include('index') %>
-        <br>
-        <%- include('form') %>
-    </main>
-    <footer>
-        <p>© 2024 My Express App. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+<%- include('./partials/header.ejs') %>
+
+<main>
+    <%- include('index') %>
+    <br>
+    <%- include('form') %>
+</main>
+
+<%- include('./partials/footer.ejs') %>
