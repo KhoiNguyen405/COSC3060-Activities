@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
     // </html>
     // `);
 
-    res.render('index', { user: userData });
+    res.render('layout', { user: userData });
 });
 
 // Start the server and listen on port 3000
