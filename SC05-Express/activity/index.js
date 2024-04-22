@@ -10,6 +10,13 @@ app.use(express.static('public'));
 // Use EJS as view engine
 app.set('view engine', 'ejs');
 
+// JS Object for user data
+let userData = {
+    name: "John Doe",
+    age: 27,
+    hobbies: ["reading", "hiking", "gaming", "sleeping"]
+};
+
 // Define a root route
 app.get('/', (req, res) => {
     // Activity 2
@@ -27,8 +34,7 @@ app.get('/', (req, res) => {
     // </html>
     // `);
 
-    // Activity 3
-    res.render('index');
+    res.render('index', { user: userData });
 });
 
 // Start the server and listen on port 3000
