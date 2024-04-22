@@ -13,7 +13,7 @@ const app = express();
 app.set('view engine', 'ejs');
 
 // Serve static files
-app.use(express.static('assets'));
+app.use(express.static('static-website-materials'));
 
 // Root
 app.get('/', (req, res) => {
