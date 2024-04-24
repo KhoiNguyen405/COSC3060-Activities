@@ -19,6 +19,9 @@
         }
 
         /*HINT: add a focus style here*/
+        button:focus, span:focus {
+            outline: 2px solid blue;
+        }
     </style>
 </head>
 
@@ -66,6 +69,22 @@
         /*HINT: first delete the corresponding row
         Then make the first element on the next row focusable
         }*/
+        const table = document.querySelector("table");
+
+        table.addEventListener("click", (event) => {
+            if (event.target.tagName === "BUTTON") {
+                let row = event.target.parentNode.parentNode;
+                let nextRow = row.nextElementSibling;
+
+                // Delete row
+                row.parentNode.removeChild(row);
+
+                // Shift focus to next row
+                let nextCell = nextRow.querySelector("span");
+                nextCell.setAttribute("tabindex", "-1");
+                nextCell.focus();
+            }
+        })
     </script>
 </body>
 
