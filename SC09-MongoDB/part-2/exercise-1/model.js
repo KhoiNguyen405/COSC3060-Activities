@@ -60,7 +60,9 @@ const teamMemberSchema = new mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     sID: { type: String, required: true, unique: true },
-    role: { type: String }
+    image: { type: String }, // String for image url
+    role: { type: String },
+    description: { type: String }
 });
 
 /** ------------------------------------------------------------------------------ **/
