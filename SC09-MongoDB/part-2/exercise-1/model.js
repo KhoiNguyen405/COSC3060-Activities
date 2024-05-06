@@ -30,6 +30,7 @@ const postSchema = new mongoose.Schema({
     image: [{ type: String }], // String for image url
     date: { type: Date, required: true },
     author: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    community: { type: mongoose.Schema.Types.ObjectId, ref: 'Community' },
     categories: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Category' }],
     tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Tag' }],
     comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }]
