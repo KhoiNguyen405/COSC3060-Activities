@@ -27,7 +27,7 @@ const communitySchema = new mongoose.Schema({
 const postSchema = new mongoose.Schema({
     title: { type: String, required: true },
     text: { type: String, required: true },
-    image: { type: String }, // String for image url
+    image: [{ type: String }], // String for image url
     date: { type: Date, required: true },
     author: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
     categories: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Category' }],
@@ -37,7 +37,7 @@ const postSchema = new mongoose.Schema({
 
 const commentSchema = new mongoose.Schema({
     text: { type: String, required: true },
-    image: { type: String }, // String for image url
+    image: [{ type: String }], // String for image url
     date: { type: Date, required: true, required: true },
     author: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
     post: { type: mongoose.Schema.Types.ObjectId, ref: 'Post', required: true }
