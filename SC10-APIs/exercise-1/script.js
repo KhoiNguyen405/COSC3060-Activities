@@ -74,8 +74,14 @@ function retrieveStoredInputs() {
 
 function addFamilyMemName(num) {
     var familyMemNameDiv = document.querySelector('#familyMembers');
+    familyMemNameDiv.innerHTML = "";
     
     for (let i=0; i < num; i++) {
+        // Create container div
+        var newContainer = document.createElement('div');
+        newContainer.setAttribute('id', `member${i+1}Div`);
+        newContainer.setAttribute('class', `familyMemberDiv`);
+
         // Create label
         var newLabel = document.createElement('label');
         newLabel.setAttribute('for', `member${i+1}`);
@@ -94,7 +100,8 @@ function addFamilyMemName(num) {
         newErrorSpan.setAttribute('id', `member${i+1}Error`);
 
         // Add input field with label to div element
-        familyMemNameDiv.append(newLabel, newInput, newErrorSpan);
+        newContainer.append(newLabel, newInput)
+        familyMemNameDiv.append(newContainer, newErrorSpan);
         
     }
 }
